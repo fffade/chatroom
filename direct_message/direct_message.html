@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Fortex | DM @#####</title>
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="direct_message.css">
+</head>
+
+<body>
+
+<!-- <h1 class="m_margin_left xl_text font_monospace">LOGIN TO FORTEX</h1> -->
+
+<!-- covers the background to make it darker -->
+<div class="primary full_width full_height zero_position" style="background-color: rgb(0, 0, 0); opacity: 0.3;"></div>
+
+<!-- main section -->
+<div class="full_width full_height zero_position hori_section">
+
+    <!-- hold menus section -->
+    <div class="section abs_pos x0 y0 full_width full_height layer_back">
+
+    </div>
+
+    <!-- button to go back to the dashboard -->
+    <button id="dashboard_btn" class="xxxs_width xxxs_height xxs_margin_left xxs_margin_right xxxs_margin_top no_outline m_rounded custom_button custom_secondary_border custom_subtitle">Home</button>
+
+    <!-- chat section -->
+    <div class="section primary xxs_margin_top xxxs_margin_left xs_margin_right m_width xxl_height custom_primary_border">
+        <p id="chat_title" class="xxxs_padding_top xs_margin_btm xxs_margin_left custom_title bold_text">CHAT WITH @#####</p>
+
+        <!-- section with messages -->
+        <div id="messages" class="section full_width xl_height xxxs_margin_left xxxs_margin_top xxs_margin_btm xxl_width hide_scroll scroll_overflow">
+
+        </div>
+
+        <!-- input a message -->
+        <input type="text" maxlength="2000" autocomplete="off" id="message_field" class="xxl_width xxxs_height xxs_margin_left xxs_padding_left no_outline s_rounded custom_header"/>
+    </div>
+
+    <!-- friend information section -->
+    <div class="section primary xxs_margin_top xs_margin_left xs_width xxl_height custom_primary_border relative_pos">
+
+    </div>
+
+</div>
+
+
+<script src="direct_message.js"></script>
+</body>
+
+</html>

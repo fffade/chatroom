@@ -1,0 +1,87 @@
+
+.custom_primary_border {
+	border: 3px solid rgb(80, 65, 120);
+}
+
+.custom_secondary_border {
+	border: 1.5px solid rgb(100, 85, 140);
+}
+
+.custom_x_border {
+	border-bottom: 1px solid rgb(190, 120, 180);
+}
+
+.custom_button {
+	background-color: rgb(110, 25, 230);
+}
+
+.custom_button:hover {
+	background-color: rgb(90, 10, 210);
+	cursor: pointer;	
+}	
+
+.custom_button:active {
+	background-color: rgb(80, 0, 200);
+}
+
+.custom_title {
+	font-family: monospace;
+	font-size: 30px;
+}
+
+.custom_subtitle {
+	font-family: monospace;
+	font-size: 22px;
+}
+
+.custom_header {
+	font-family: Arial;
+	font-size: 16px;
+}
+
+.custom_footer {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.custom_badge {
+	width: 24px;
+	height: 24px;
+}
+
+.custom_menu {
+	background-color: rgb(60, 60, 60);
+	border-radius: 5px;
+	width: 160px;
+}
+
+.custom_menu button {
+	background-color: rgb(60, 60, 60);
+	width: 90%;
+	position: relative;
+	left: 5%;
+	height: 40px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+	text-align: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.custom_menu button:hover {
+	background-color: rgb(70, 70, 70);
+	cursor: pointer;
+}
+
+.custom_hover {
+	background-color: rgb(60, 60, 60);
+	border-radius: 5px;
+	color: rgb(220, 220, 220);
+	font-family: monospace;
+	font-size: 16px;
+	padding: 5px;
+}

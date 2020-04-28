@@ -1,0 +1,34 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fffade/multiplayer-trivia.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Fade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fffade/multiplayer-trivia/issues"
+  },
+  "homepage": "https://github.com/fffade/multiplayer-trivia#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "electron": "^7.1.11",
+    "electron-prebuilt": "^1.4.13",
+    "electron-store": "^5.1.0",
+    "mysql": "^2.18.1",
+    "node-localdb": "0.0.3",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "sync-mysql": "^3.0.1"
+  }
+}

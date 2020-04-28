@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Fortex | Register</title>
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
+  </head>
+
+  <body>
+
+    <!-- covers the background to make it darker -->
+    <div class="primary full_width full_height zero_position"></div>
+    
+    <!-- section with register form -->
+    <div class="full_width full_height zero_position ">
+      <div class="section full_width full_height centered_hori relative_pos">
+        <p class="xxs_padding_top xxxs_margin_btm centered_text custom_title">Register a Fortex Account</p>
+        <p class="s_margin_left s_margin_right centered_text custom_subtitle">Enter your new account's information below</p>
+
+        <p class="s_margin_top xs_margin_left custom_header">Username</p>
+        <input type="text" maxlength="16" autocomplete="off" id="usernameField" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xs_margin_top xs_margin_left custom_header">Password</p>
+        <input type="password" maxlength="16" autocomplete="off" id="passwordField" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xs_margin_top xs_margin_left custom_header">Confirm Password</p>
+        <input type="password" maxlength="16" autocomplete="off" id="c_passwordField" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xs_margin_top xs_margin_left custom_header">Email Address (optional)</p>
+        <input type="text" maxlength="24" autocomplete="off" id="email_field" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xs_margin_top xs_margin_left custom_header">Phone Number (optional)</p>
+        <input type="text" maxlength="24" autocomplete="off" id="p_number_field" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xs_margin_top xs_margin_left custom_header">Location</p>
+        <select required="required" id="location" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header">
+          <option value="CA">Canada</option>
+          <option value="UK">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="EU">European Union</option>
+          <option value="SEA">South East Asia</option>
+          <option value="AF">Africa</option>
+          <option value="AU">Australia</option>
+          <option value="RU">Russia</option>
+          <option value="EAS">East Asia</option>
+          <option value="IN">India</option>
+          <option value="CN">China</option>
+        </select>
+        <p id="message" class="xxxs_margin_top xs_margin_left custom_footer">...</p>
+
+        <button id="create_acc_btn" class="s_width xxxs_height s_margin_top xs_margin_left no_outline m_rounded custom_secondary_border custom_button custom_subtitle">Create Account</button>
+      </div>
+    </div>
+
+    <script src="register.js"></script>
+  </body>
+
+</html>

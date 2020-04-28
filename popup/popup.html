@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Fortex | Popup</title>
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+
+<!-- <h1 class="m_margin_left xl_text font_monospace">LOGIN TO FORTEX</h1> -->
+
+<!-- main section -->
+<div class="full_width full_height zero_position">
+
+    <!-- all information like title and buttons will be determined through storage -->
+    <div class="l_width m_height relative_pos centered_hori">
+        <p id="title" class="s_margin_top centered_text custom_title bold_text"></p>
+        <p id="prompt" class="xs_margin_top centered_text custom_subtitle"></p>
+    </div>
+
+    <div id="buttons_list" class="full_width xs_height l_margin_top relative_pos hori_section">
+
+    </div>
+
+</div>
+
+
+<script src="popup.js"></script>
+</body>
+
+</html>

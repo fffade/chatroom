@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Fortex | Dashboard</title>
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+  </head>
+
+  <body>
+
+    <!-- <h1 class="m_margin_left xl_text font_monospace">LOGIN TO FORTEX</h1> -->
+
+    <!-- covers the background to make it darker -->
+    <div class="primary full_width full_height zero_position" style="background-color: rgb(0, 0, 0); opacity: 0.3;"></div>
+    
+    <!-- main section -->
+    <div class="full_width full_height zero_position hori_section">
+
+      <!-- hold menus section -->
+      <div class="section relative_pos x0 y0 full_width full_height">
+        <!-- server menu for right clicking servers -->
+        <div id="server_menu" class="section abs_pos custom_menu" style="visibility: hidden; z-index: 10">
+
+        </div>
+        <!-- server hover info -->
+        <div id="server_hover_info" class="section abs_pos custom_hover" style="visibility: hidden; z-index: 10;">
+
+        </div>
+      </div>
+
+      <!-- section for profile and friends -->
+      <div class="section abs_pos m_width full_height">
+
+        <!-- section with profile information -->
+        <div id="profile_info" class="section primary xxl_width s_height xs_margin_top xs_margin_left custom_primary_border relative_pos">
+          <p class="xxxs_padding_top xs_margin_btm xxs_margin_left custom_title bold_text">PROFILE INFORMATION</p>
+
+          <div class="hori_section xxs_margin_top s_margin_left">
+            <p id="display-name" class="custom_subtitle">##########</p>
+            <img id="status_indicator_img" alt="Status Indicator" width="16" height="16" src="../res/status_indicators/online.png" class="xs_margin_top xs_margin_left"/>
+          </div>
+          <p id="location" class="xs_margin_top s_margin_left custom_header">Location: ##</p>
+          <p id="user-id" class="xxxs_margin_top s_margin_left custom_header">ID: ######</p>
+
+          <div id="status-container" class="m_margin_top s_margin_left m_width xs_height s_rounded custom_secondary_border">
+            <p id="status" class="xxxs_margin_left relative_pos centered_vert centered_text custom_subtitle"></p>
+          </div>
+
+          <!-- profile picture and badge -->
+          <div class="xs_width abs_pos x65 y20">
+            <img id="profile_pic_img" alt="Profile Picture" width="90" height="90" src="../restob1w.png" class="full_width auto_height s_rounded custom_secondary_border"/>
+            <div id="badges" class="full_width max_full_width hori_section hori_wrap">
+              <!--<img alt="Badge" src="../res/badges/spiral.png" class="xs_margin_top xs_margin_left custom_badge"/>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- section with extra profile information -->
+        <div id="extra_profile_info" class="section primary xxl_width xxs_height xxs_margin_top xs_margin_left custom_primary_border relative_pos">
+          <p id="bio" class="xs_margin_top s_margin_left custom_header">Bio: ####</p>
+          <p id="email-address" class="xs_margin_top s_margin_left custom_header">Email: ##########</p>
+          <p id="phone-number" class="xs_margin_top s_margin_left custom_header">Phone Number: ##########</p>
+        </div>
+
+        <!-- section for friends -->
+        <div id="friends" class="section primary xxl_width s_height xs_margin_top xs_margin_left relative_pos custom_primary_border">
+          <p class="xxxs_padding_top xs_margin_btm xxs_margin_left custom_title bold_text">FRIENDS</p>
+
+          <div id="friends_list" class="xxs_margin_top xl_height scroll_overflow hide_scroll">
+            <!-- friends will be added through js file and database -->
+            <!-- message if you have no friends -->
+            <p id="no-friends-msg" class="xs_margin_top m_margin_left custom_subtitle">Aw, you have no friends...</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- section for portals -->
+      <div class="section abs_pos m_width full_height x50">
+
+        <!-- section for favourite portals -->
+        <div class="section primary xxl_width m_height xs_margin_top xs_margin_left relative_pos custom_primary_border">
+          <div class="xxxs_padding_top xs_margin_btm xxxs_height full_width hori_section">
+            <p class="xxs_margin_left custom_title bold_text">FAVOURITE PORTALS</p>
+            <p id="fav_portals_page_num" class="xxs_margin_left custom_subtitle"></p>
+            <button id="fav_portals_clear" class="xxs_width xxl_height xxs_margin_left no_outline m_rounded custom_button custom_secondary_border custom_subtitle">Clear</button>
+          </div>
+
+          <!-- portals will be added to the pages through js file and database -->
+          <p id="loading_fav_portals_msg" class="xxs_margin_top xs_margin_left custom_subtitle">Loading favourite portals...</p>
+          <div id="fav_portal_pages" class="xxs_margin_top xs_margin_left l_height">
+
+          </div>
+
+          <div id="fav_portals_buttons" class="abs_pos y85 xl_width xxs_height hori_section" style="display: none;">
+            <button id="fav_portals_back" class="xs_width l_height xs_margin_left no_outline m_rounded custom_button custom_secondary_border custom_subtitle">Back</button>
+            <button id="fav_portals_next" class="xs_width l_height xs_margin_left no_outline m_rounded custom_button custom_secondary_border custom_subtitle">Next</button>
+          </div>
+        </div>
+
+        <!-- section for all portals -->
+        <div id="all_portals" class="section primary xxl_width s_height xs_margin_top xs_margin_left relative_pos custom_primary_border">
+          <p class="xxxs_padding_top xs_margin_btm xxs_margin_left custom_title bold_text">ALL PORTALS</p>
+
+          <!-- portals will be added to this through js file and database -->
+          <p id="loading_all_portals_msg" class="xxs_margin_top xs_margin_left custom_subtitle">Loading portals...</p>
+          <div id="all_portals_list" class="xxs_margin_top xs_margin_left xxl_width xxl_height hori_section scroll_overflow hide_scroll">
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+  </body>
+
+</html>

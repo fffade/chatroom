@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Fortex | Login</title>
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+  </head>
+
+  <body>
+
+    <!-- <h1 class="m_margin_left xl_text font_monospace">LOGIN TO FORTEX</h1> -->
+
+    <!-- covers the background to make it darker -->
+    <div class="full_width full_height zero_position" style="background-color: rgb(0, 0, 0); opacity: 0.5;"></div>
+    
+    <!-- section with login form -->
+    <div class="full_width full_height zero_position">
+      <div class="section primary m_width m_height centered_hori relative_pos y25 custom_primary_border">
+        <p class="xs_padding_top xxxs_margin_btm centered_text custom_title">Welcome to Fortex!</p>
+        <p class="centered_text custom_subtitle">Enter your info below</p>
+
+        <p class="s_margin_top xs_margin_left custom_header">Username</p>
+        <input type="text" autocomplete="off" id="usernameField" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p class="xxs_margin_top xs_margin_left custom_header">Password</p>
+        <input type="password" autocomplete="off" id="passwordField" class="xxl_width xxxs_height xs_margin_left no_outline s_rounded custom_header"/>
+
+        <p id="message" class="xxxs_margin_top xs_margin_left custom_footer">...</p>
+
+        <button id="login_btn" class="xs_width xxxs_height xs_margin_top xs_margin_left no_outline m_rounded custom_secondary_border custom_button custom_subtitle">Login</button>
+        <button id="register_btn" class="xs_width xxxs_height s_margin_top xxs_margin_left no_outline m_rounded custom_secondary_border custom_button custom_subtitle">Register</button>
+
+      </div>
+    </div>3
+
+    <script src="login.js"></script>
+  </body>
+
+</html>
