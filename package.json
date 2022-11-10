@@ -22,7 +22,7 @@
   "homepage": "https://github.com/fffade/multiplayer-trivia#readme",
   "devDependencies": {},
   "dependencies": {
-    "electron": "^7.1.11",
+    "electron": "^18.3.7",
     "electron-prebuilt": "^1.4.13",
     "electron-store": "^5.1.0",
     "mysql": "^2.18.1",
